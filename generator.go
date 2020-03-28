@@ -12,14 +12,14 @@ const (
 	LogBook      GeneratorType = "logbook"
 )
 
-// GeneratorType see https://www.streit.cc/extern/uddf_v321/en/type.html
+// GeneratorType see https://www.streit.cc/extern/uddf_v321/en/generator.html
 type GeneratorType string
 
 func (gt GeneratorType) String() string {
 	return string(gt)
 }
 
-// MarshalXML is the custom XML marshaler
+// MarshalXML is the custom XML marshaler for GeneratorType
 func (gt GeneratorType) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	switch gt {
 	case Converter, DiveComputer, LogBook:
@@ -29,7 +29,7 @@ func (gt GeneratorType) MarshalXML(e *xml.Encoder, start xml.StartElement) error
 	}
 }
 
-// UnmarshalXML is the custom XML unmarshaler
+// UnmarshalXML is the custom XML unmarshaler for GeneratorType
 func (gt *GeneratorType) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	var s string
 
