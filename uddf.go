@@ -21,15 +21,3 @@ type UDDF struct {
 	Version   string    `xml:"version,attr"`
 	Generator Generator `xml:"generator"`
 }
-
-// Generator describes the software used to generate the UDDF file
-type Generator struct {
-	XMLName      xml.Name      `xml:"generator"`
-	Name         string        `xml:"name"`
-	Aliasname    string        `xml:"aliasname,omitempty"`
-	Manufacturer Manufacturer  `xml:"manufacturer,omitempty"`
-	Version      string        `xml:"version,omitempty"`
-	Datetime     Datetime      `xml:"datetime,omitempty"`
-	Type         GeneratorType `xml:"type,omitempty"`
-	Link         Link        `xml:"link,omitempty"`
-}
