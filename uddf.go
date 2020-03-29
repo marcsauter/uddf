@@ -28,5 +28,6 @@ type Generator struct {
 	Name      string        `xml:"name"`
 	Aliasname string        `xml:"aliasname,omitempty"`
 	Type      GeneratorType `xml:"type,omitempty"`
+	Datetime  Datetime      `xml:"datetime,omitempty"`
 	Version   string        `xml:"version,omitempty"`
 }
