@@ -12,7 +12,7 @@ const (
 	LogBook      GeneratorType = "logbook"
 )
 
-// GeneratorType see https://www.streit.cc/extern/uddf_v321/en/generator.html
+// GeneratorType https://www.streit.cc/extern/uddf_v321/en/generator.html
 type GeneratorType string
 
 func (gt GeneratorType) String() string {

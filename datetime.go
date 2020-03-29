@@ -25,7 +25,7 @@ var (
 	}
 )
 
-// Datetime see https://www.streit.cc/extern/uddf_v321/de/datetime.html
+// Datetime https://www.streit.cc/extern/uddf_v321/de/datetime.html
 type Datetime time.Time
 
 func (dt Datetime) String() string {
