@@ -1,4 +1,5 @@
 // Package uddf implements the Universal Dive Data Format as in https://www.streit.cc/extern/uddf_v321/en/index.html
+// use github.com/go-playground/validator for struct validation
 package uddf
 
 import (
@@ -19,5 +20,5 @@ func New() *UDDF {
 type UDDF struct {
 	XMLName   xml.Name  `xml:"uddf"`
 	Version   string    `xml:"version,attr"`
-	Generator Generator `xml:"generator"`
+	Generator Generator `xml:"generator" validate:"required"`
 }
