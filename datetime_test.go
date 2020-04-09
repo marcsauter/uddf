@@ -11,6 +11,7 @@ import (
 )
 
 var (
+	// nolint: gochecknoglobals
 	DatetimeTests = map[string]string{
 		"1985-02":                   "2006-01",
 		"198502":                    "200601",

@@ -21,4 +21,5 @@ type UDDF struct {
 	XMLName   xml.Name  `xml:"uddf"`
 	Version   string    `xml:"version,attr"`
 	Generator Generator `xml:"generator" validate:"required"`
+	Diver Diver `xml:"diver"`
 }

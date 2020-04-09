@@ -8,6 +8,7 @@ import (
 
 var (
 	// DatetimeFormats is the list of all supported formats
+	// nolint: gochecknoglobals
 	DatetimeFormats = []string{
 		time.RFC3339,
 		"2006-01",
@@ -50,7 +51,9 @@ func (dt *Datetime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		if err != nil {
 			continue
 		}
+
 		*dt = Datetime(t)
+
 		return nil
 	}
 
